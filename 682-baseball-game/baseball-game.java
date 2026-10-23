@@ -18,8 +18,8 @@ class Solution {
         }
         }
         int tsum = 0;
-        for(int score : st){
-            tsum += score;
+        while(!st.isEmpty()){
+            tsum += st.pop();
       }  
         return tsum;
     }
