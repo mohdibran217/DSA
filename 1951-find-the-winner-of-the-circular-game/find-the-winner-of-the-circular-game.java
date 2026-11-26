@@ -4,14 +4,13 @@ class Solution {
         for(int i=1; i<=n; i++){
             q.add(i);
         }
-        int size=q.size();
-        while(size!=1){
-            for(int i=1; i<k; i++){
-                int d=q.remove();
-                q.add(d);
+        // int size=q.size();
+        while(q.size()>1){
+            for(int i=0; i<k-1; i++){
+               q.add(q.remove());
             }
             q.remove();
-            size--;
+            
         }
         int ans=q.peek();
         return ans;
